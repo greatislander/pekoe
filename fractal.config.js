@@ -17,3 +17,4 @@ fractal.components.set("path", __dirname + "/src/components");
 fractal.components.set("ext", ".njk");
 fractal.docs.set("path", __dirname + "/src/docs");
 fractal.web.set("static.path", __dirname + "/src/assets");
+fractal.web.set("builder.dest", __dirname + "/build");

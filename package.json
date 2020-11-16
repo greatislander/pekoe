@@ -12,6 +12,7 @@
     "markdown-it": "12.0.2"
   },
   "scripts": {
+    "build": "fractal build",
     "lint": "eslint **.js",
     "start": "fractal start --sync",
     "test": "lint"
