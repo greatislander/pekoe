@@ -1,0 +1,22 @@
+{
+  "name": "twozerofive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@frctl/fractal": "1.5.1",
+    "@frctl/nunjucks": "2.0.5",
+    "eslint": "7.13.0",
+    "eslint-config-fluid": "2.0.0",
+    "markdown-it": "12.0.2"
+  },
+  "scripts": {
+    "lint": "eslint **.js",
+    "start": "fractal start --sync",
+    "test": "lint"
+  },
+  "keywords": ["patterns"],
+  "author": "OCAD University",
+  "license": "BSD-3-Clause"
+}
