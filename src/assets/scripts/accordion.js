@@ -1,6 +1,6 @@
 "use strict";
 
-class TwoZeroFiveAccordion extends HTMLElement {
+class PekoeAccordion extends HTMLElement {
     constructor() {
         super();
 
@@ -78,4 +78,4 @@ class TwoZeroFiveAccordion extends HTMLElement {
 
 }
 
-window.customElements.define("twozerofive-accordion", TwoZeroFiveAccordion);
+window.customElements.define("pekoe-accordion", PekoeAccordion);

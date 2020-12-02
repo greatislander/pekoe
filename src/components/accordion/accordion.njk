@@ -1,6 +1,6 @@
-<twozerofive-accordion data-level="{{ level }}">
+<pekoe-accordion data-level="{{ level }}">
 {%- for panel in panels -%}
     <h{{ level }}>{{ panel.heading }}</h{{ level }}>
     {{ panel.content | markdown | safe }}
 {%- endfor -%}
-</twozerofive-accordion>
+</pekoe-accordion>
