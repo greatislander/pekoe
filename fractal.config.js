@@ -1,5 +1,3 @@
-"use strict";
-
 const fractal = module.exports = require("@frctl/fractal").create();
 const MarkdownIt = require("markdown-it");
 const nunjucks = require("@frctl/nunjucks")({
@@ -11,7 +9,7 @@ const nunjucks = require("@frctl/nunjucks")({
     }
 });
 
-fractal.set("project.title", "Two Zero Five");
+fractal.set("project.title", "Pekoe");
 fractal.components.engine(nunjucks);
 fractal.components.set("path", __dirname + "/src/components");
 fractal.components.set("ext", ".njk");

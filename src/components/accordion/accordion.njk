@@ -1,6 +1,34 @@
-<pekoe-accordion data-level="{{ level }}">
+<h1>Accordion</h1>
+
+<div class="accordion">
 {%- for panel in panels -%}
-    <h{{ level }}>{{ panel.heading }}</h{{ level }}>
+    <h2>{{ panel.header | safe }}</h2>
     {{ panel.content | markdown | safe }}
 {%- endfor -%}
-</pekoe-accordion>
+</div>
+
+<script>
+    const accordion = new window.Pekoe.accordion('.accordion', {
+        onCreate: function() {
+            console.log("Accordion created.");
+        },
+        onExpand: function() {
+            console.log(this.header.textContent + " expanded.");
+        },
+        onCollapse: function() {
+            console.log(this.header.textContent + " collapsed.");
+        }
+    });
+</script>
+
+<style>
+.accordion button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+}
+</style>

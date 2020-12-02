@@ -1,23 +1,34 @@
 {
-  "name": "twozerofive",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "pekoe",
+  "version": "0.0.0",
+  "description": "An unstyled, progressively-enhanced component library.",
+  "main": "dist/pekoe.js",
   "dependencies": {},
   "devDependencies": {
     "@frctl/fractal": "1.5.1",
     "@frctl/nunjucks": "2.0.5",
+    "concurrently": "5.3.0",
     "eslint": "7.13.0",
     "eslint-config-fluid": "2.0.0",
-    "markdown-it": "12.0.2"
+    "markdown-it": "12.0.2",
+    "npm-run-all": "4.1.5",
+    "rollup": "2.34.0"
   },
   "scripts": {
-    "build": "fractal build",
+    "build": "run-s build:*",
+    "build:rollup": "rollup src/scripts/index.js --file src/assets/scripts/pekoe.js --format iife",
+    "build:fractal": "fractal build",
+    "build:dist": "rollup --config=rollup.config.js",
     "lint": "eslint **.js",
-    "start": "fractal start --sync",
+    "start": "concurrently \"npm:watch:rollup\" \"npm:watch:fractal\"",
+    "watch:rollup": "rollup src/scripts/index.js --file src/assets/scripts/pekoe.js --format iife --watch",
+    "watch:fractal": "fractal start --sync",
     "test": "lint"
   },
-  "keywords": ["patterns"],
+  "keywords": [
+    "component-library",
+    "progressive-enhancement"
+  ],
   "author": "OCAD University",
   "license": "BSD-3-Clause"
 }
